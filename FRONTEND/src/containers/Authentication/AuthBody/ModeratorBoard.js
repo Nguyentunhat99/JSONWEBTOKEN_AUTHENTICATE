@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { toast } from "react-toastify";
 
 import * as actions from "../../../store/actions";
 
@@ -38,8 +39,9 @@ class ModeratorBoard extends Component {
             this.props.history.push("/login");
           }, 5000);
         } else {
-          this.setState({ content: res.message });
           await updateAccessToken(dataToken.accessToken);
+          this.props.history.push("/homejwt");
+          toast.error(res.message);
         }
       }
     }

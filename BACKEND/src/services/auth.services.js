@@ -162,7 +162,7 @@ let refreshToken = (data) => {
           exclude: ["createdAt", "updatedAt"],
         },
       });
-      console.log(refreshTokenDB);
+      // console.log(refreshTokenDB);
 
       if (!refreshTokenDB) {
         resolve({

@@ -1,11 +1,5 @@
 export const path = {
   HOME: "/",
-  HOMEPAGE: "/home",
-  LOG_OUT: "/logout",
-  SYSTEM: "/system",
-  DETAIL_DOCTOR: "/detail-doctor/:id",
-  DOCTOR: "/doctor",
-  AUTH: "/auth",
   GOHOME: "/homejwt",
   REGISTER: "/register",
   LOGIN: "/login",

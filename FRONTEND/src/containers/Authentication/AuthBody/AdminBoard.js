@@ -5,13 +5,13 @@ import * as actions from "../../../store/actions";
 
 import { getAdminBoard } from "../../../services/userService";
 import { handleRefreshToken } from "../../../services/authService";
+import { toast } from "react-toastify";
 
 class AdminBoard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       content: [],
-      time: [],
     };
   }
   async componentDidMount() {}
@@ -40,6 +40,8 @@ class AdminBoard extends Component {
           }, 5000);
         } else {
           await updateAccessToken(dataToken.accessToken);
+          this.props.history.push("/homejwt");
+          toast.error(res.message);
         }
       }
     }
